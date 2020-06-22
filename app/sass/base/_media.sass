@@ -5,6 +5,15 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .main-mnu
+    display: none
+
+  .top-line
+    .btn
+      display: none
+
+  .hamburger
+    display: block
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -14,6 +23,39 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+  .top-links
+    display: none
+
+  .hamburger
+    width: 28px
+    height: 16px
+    top: -4px
+
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+    height: 2px
+    width: 28px
+
+  .hamburger-inner:before
+    top: -7px
+
+  .hamburger--collapse .hamburger-inner:after
+    top: -14px
+
+  .hamburger-box
+    height: 20px
+
+@media (max-width: 390px)
+
+  .mobile-contacts .btn
+    width: 100%
+
+  .top-line
+    padding: 17px 0 18px
+
+  .logo
+    img
+      width: 55px
+      height: auto
 
 
 /*==========  Mobile First  ==========*/

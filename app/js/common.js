@@ -1,5 +1,56 @@
 $(document).ready(function(){
 
+    /**
+     * mobile-mnu customization
+     */
+    var mmenu = $('#mobile-mnu');
+    var menuLogo = mmenu.data("logo");
+    var $mmenu = mmenu.mmenu({
+        // navbars: [{
+        //     content: [ "Навигация" ],
+        //     height: 3
+        // }],
+        "pageScroll": true,
+
+        "navbar": {
+            "title" : "Навигация",
+        },
+        "extensions": [
+            "theme-dark",
+            "pagedim-black",
+            "position-front",
+            "fx-listitems-slide",
+            "fullscreen",
+        ],
+    }, {
+        offCanvas: {
+            pageSelector: "#page-container"
+        },
+    });
+
+    var mmenuBtn = $("#mmenu-btn");
+    var API = $mmenu.data("mmenu");
+
+    mmenuBtn.click(function() {
+        API.open();
+        $(this).addClass('is-active')
+    });
+
+    $('#close-mnu').click(function(e){
+        e.preventDefault();
+        API.close();
+    });
+
+
+    API.bind( "close:start", function() {
+        setTimeout(function() {
+            mmenuBtn.removeClass( "is-active" );
+        }, 300);
+    });
+    /**
+     * end mobile-mnu customization
+     */
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);

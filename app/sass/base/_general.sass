@@ -63,5 +63,34 @@ ul
 .hidden
   display: none!important
 // ======= END TEMPLATE STYLES =======
+.btn
+  display: inline-block
+  line-height: 1
+  white-space: nowrap
+  text-align: center
+  cursor: pointer
+  border: none
+  box-shadow: none
+  +mt(.3s)
+  border-radius: 4px
+
+.btn-transparent
+  border: 1px solid $accent-red
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  color: $text
+  width: 165px
+  height: 45px
+  font-size: 14px
+  &:hover
+    background-color: $accent-red
+    color: #fff
+
+.btn-red
+  background-color: $accent-red
+  color: #fff
+  &:hover
+    background-color: darken($accent-red, 5%)
 
 
