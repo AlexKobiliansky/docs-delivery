@@ -5,6 +5,19 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .intro-content
+    width: 550px
+    h1
+      font-size: 28px
+      line-height: 1.3
+
+  .intro-item
+    &-num
+      font-size: 28px
+    &-desc
+      font-size: 14px
+
   .main-mnu
     display: none
 
@@ -18,11 +31,54 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-intro
+    padding: 50px 0
+
+  .intro-img
+    display: none
+
 // ≥768px
 +media-breakpoint-down(sm)
+  .intro-content
+    width: 100%
+    h1
+      font-size: 24px
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .main-head
+    position: relative
+    z-index: 2
+
+  .intro-mobile
+    display: block
+  
+  .intro-content
+    h1
+      font-size: 22px
+      margin-bottom: 30px
+    .btn
+      width: 288px
+
+  .intro-items-wrap
+    flex-wrap: wrap
+    margin-bottom: 15px
+
+  .intro-item
+    padding: 0
+    width: 100%
+    margin-bottom: 20px
+    &-num
+      font-size: 25px
+      margin-bottom: 2px
+    &-desc
+      font-size: 16px
+
+
+  .s-intro
+    padding: 35px 0 46px
+
   .top-links
     display: none
 

@@ -51,6 +51,21 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
+    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ')
+
+    $('.intro-item-num').each(function () {
+        var $val = $(this).data("value");
+
+        $(this).animateNumber(
+            {
+                number: $val,
+                numberStep: comma_separator_number_step
+            },
+            1500
+        );
+    });
+
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
