@@ -1,0 +1,63 @@
+.s-stages
+  padding-bottom: 70px
+  overflow: hidden
+  counter-reset: stages
+  .section-title
+    margin-bottom: 59px
+
+.stages-wrap
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.stages-left
+  width: 570px
+
+.stages-right
+  width: calc(100% - 740px)
+  position: relative
+  img
+    position: absolute
+    left: 0
+    top: calc(50% - 356px)
+
+.stage-item
+  font-size: 22px
+  line-height: 1.4
+  font-weight: 700
+  letter-spacing: 0.07em
+  margin-bottom: 40px
+  position: relative
+  padding-left: 65px
+  &:before
+    content: counter(stages)
+    counter-increment: stages
+    position: absolute
+    font-size: 50px
+    font-weight: 700
+    color: $accent-red
+    top: calc(50% - 35px)
+    left: 5px
+  &:after
+    content: ''
+    position: absolute
+    width: 4px
+    height: 4px
+    background-color: $accent-blue
+    border-radius: 50%
+    left: 15px
+    top: calc(50% + 38px)
+    box-shadow: 0 14px $accent-blue, 0 28px $accent-blue, 0 42px $accent-blue
+
+
+.stage-item
+  &:nth-child(1), &:nth-child(2)
+    margin-bottom: 70px
+  &:nth-child(4)
+    &:before
+      left: -3px
+  &:last-child
+    &:after
+      display: none
+
+
