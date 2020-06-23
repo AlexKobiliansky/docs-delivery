@@ -6,6 +6,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .about-item
+    padding-right: 0
+
+  .about-right
+    width: calc(100% - 510px)
+
   .intro-content
     width: 550px
     h1
@@ -31,6 +37,28 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-white
+    padding-top: 50px
+
+  .s-about
+    padding-bottom: 50px
+    .section-title
+      margin-bottom: 35px
+
+  .about-wrap
+    flex-direction: column
+
+  .about-left
+    width: 100%
+    margin-bottom: 30px
+    height: 360px
+
+  .about-right
+    width: 100%
+
+  .section-title
+    font-size: 32px
+
   .s-intro
     padding: 50px 0
 
@@ -46,6 +74,23 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .about-left
+    padding: 50px 25px 57px
+    height: auto
+    &-logo
+      display: none
+    &-desc
+      font-size: 14px
+
+  .s-white
+    padding-top: 80px
+
+  .section-title
+    font-size: 25px
+
+  .s-about
+    padding-bottom: 80px
 
   .main-head
     position: relative
