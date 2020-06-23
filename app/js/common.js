@@ -51,6 +51,17 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
+    $('.services-slider').owlCarousel({
+        loop:true,
+        nav: false,
+        items: 1,
+        margin: 25,
+        dots: false,
+        autoHeight: false,
+        navText: ["",""],
+        autoWidth:true,
+    });
+
     var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ')
 
     $('.intro-item-num').each(function () {
@@ -64,6 +75,7 @@ $(document).ready(function(){
             1500
         );
     });
+
 
 
     //E-mail Ajax Send

@@ -37,6 +37,9 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .services-wrap
+    grid-template-columns: repeat(3, 1fr)
+
   .s-white
     padding-top: 50px
 
@@ -67,6 +70,10 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .services-wrap
+    grid-template-columns: repeat(2, 1fr)
+
   .intro-content
     width: 100%
     h1
@@ -74,6 +81,25 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+  .s-services
+    padding-bottom: 45px
+    .section-title
+      margin-bottom: 30px
+
+
+  .services-slider.owl-carousel
+    display: block
+    width: calc(100% + 15px)
+
+  .service-item
+    width: 210px
+    &-icon
+      width: 50px!important
+      height: auto!important
+
+  .services-wrap
+    display: none
+
 
   .about-left
     padding: 50px 25px 57px
