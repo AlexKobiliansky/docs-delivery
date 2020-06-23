@@ -6,6 +6,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .section-form
+    padding: 0 50px
+
   .stage-item
     font-size: 20px
     padding-left: 50px
@@ -51,6 +54,12 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .section-form
+    padding: 0
+    input
+      padding: 15px
+
 
   .s-stages
     padding-bottom: 20px
@@ -107,6 +116,17 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .section-form
+    .form-labels-wrap
+      flex-direction: column
+      label
+        width: 100%
+        margin-bottom: 20px
+      .btn
+        margin-top: 10px
+        width: 100%
+        padding: 19px
+
   .stages-left
     width: 100%
 
@@ -121,6 +141,22 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-form
+    padding: 40px 0 60px
+    .section-title
+      line-height: 1.25
+
+  .section-form
+    .form-desc
+      font-size: 14px
+      margin-bottom: 40px
+    input
+      font-size: 16px
+      padding: 14px 20px
+    .form-labels-wrap
+      .btn
+        font-size: 16px
+        padding: 17px
 
   .stage-item
     font-size: 16px
