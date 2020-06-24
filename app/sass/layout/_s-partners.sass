@@ -1,0 +1,39 @@
+.s-partners
+  padding-bottom: 49px
+  .section-title
+    margin-bottom: 12px
+  .section-desc
+    text-align: center
+    +ls
+    font-size: 18px
+    margin-bottom: 45px
+
+.partners-wrap
+  border-top: 1px solid rgba(#fff, .2)
+  padding-top: 19px
+
+.partner-items-wrap
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+
+
+.partner-item
+  height: 110px
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 20px
+  cursor: pointer
+  border-right: 1px solid rgba(#fff, .1)
+  border-bottom: 1px solid rgba(#fff, .1)
+  img
+    +mt(.3s)
+    filter: brightness(0) invert(1)
+    max-width: 100%
+  &:hover
+    img
+      filter: brightness(1) invert(0)
+  &:nth-child(4n)
+    border-right: none
+  &:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4)
+    border-bottom: none

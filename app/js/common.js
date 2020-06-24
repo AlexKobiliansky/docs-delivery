@@ -62,6 +62,16 @@ $(document).ready(function(){
         autoWidth:true,
     });
 
+
+    $('.partners-slider').owlCarousel({
+        loop: true,
+        nav: false,
+        items: 1,
+        margin: 20,
+        dots: true,
+        autoHeight: false,
+    });
+
     var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ')
 
     $('.intro-item-num').each(function () {

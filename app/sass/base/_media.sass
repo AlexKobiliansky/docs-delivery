@@ -162,6 +162,42 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .partners-slider
+    .owl-dots
+      width: 100%
+      text-align: center
+      button.owl-dot
+        display: inline-block
+        width: 7px
+        height: 7px
+        border-radius: 50%
+        background-color: rgba(#fff, .4)
+        margin: 0 7px
+        &.active
+          background-color: #fff
+
+
+  .partner-item
+    border: none
+    padding-left: 0
+    padding-right: 0
+    img
+      width: auto!important
+      filter: none
+
+  .s-partners
+    .section-title
+      margin-bottom: 10px
+    .section-desc
+      font-size: 14px
+      margin-bottom: 16px
+
+  .partners-wrap
+    width: calc(100% - 30px)
+    margin-left: auto
+    margin-right: auto
+
+
   .city-item
     font-size: 16px
     width: 100%
