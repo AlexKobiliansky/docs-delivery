@@ -121,7 +121,7 @@
 					<!-- /intro-item -->
 				</div>
 
-				<a href="#0" class="btn btn-red">Подробнее</a>
+				<a href="#popup-form" class="btn btn-red">Подробнее</a>
 			</div>
 
 		</div>
@@ -391,6 +391,45 @@
 	<!-- ======= SECTION FORM END ======= -->
 </div>
 
+<div class="hidden">
+	<form class="contact-form popup-form" id="popup-form">
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Docs Delivery">
+		<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+		<input type="hidden" name="form_subject" value="Заявка с сайта Docs Delivery">
+		<!-- END Hidden Required Fields -->
+
+		<h2 class="section-title">Оставьте заявку</h2>
+		<div class="form-desc">Мы свяжемся с Вами в ближайшее время</div>
+
+		<div class="form-labels-wrap">
+			<label>
+				<input type="text" placeholder="Ваше имя" name="Имя" autocomplete="off" data-validation="custom"
+					   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,50}$">
+			</label>
+
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="Номер телефона"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+			</label>
+
+			<div class="btn-wrap">
+				<button type="submit" class="btn btn-red">Отправить</button>
+			</div>
+			<label class="agreement-label">
+				<input type="checkbox" checked required><span>Согласен(а) на обработку персональных данных</span>
+			</label>
+		</div>
+	</form>
+
+
+	<div class="greeting" id="greeting">
+		<h2 class="section-title">Заявка отправлена</h2>
+		<img src="img/icons/greeting-img.svg" alt="alt" class="greeting-img">
+	</div>
+</div>
 
 <script src="js/scripts.min.js"></script>
 

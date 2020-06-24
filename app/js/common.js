@@ -110,6 +110,18 @@ $(document).ready(function(){
     });
 
 
+    $("a[href='#popup-form']").magnificPopup({
+        type: "inline",
+        fixedContentPos: !1,
+        fixedBgPos: !0,
+        overflowY: "auto",
+        closeBtnInside: !0,
+        preloader: !1,
+        midClick: !0,
+        removalDelay: 300,
+        mainClass: "my-mfp-zoom-in",
+    });
+
     var uPhone = $('.user-phone');
     uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
 
@@ -124,16 +136,43 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
+    $('input[type="checkbox"]').styler();
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        th.find('.btn').prop('disabled','disabled');
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
+            $.magnificPopup.open({
+                items: {
+                    src: '#greeting'
+                },
+                type: 'inline',
 
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-request'
+            }, 0);
+
+            setTimeout(function(){
+                $.magnificPopup.close();
+            }, 2000);
+
+            th.find(".btn").removeAttr('disabled');
+            th.trigger("reset");
         });
         return false;
     });
