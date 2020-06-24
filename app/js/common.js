@@ -137,6 +137,7 @@ $(document).ready(function(){
     });
 
     $('input[type="checkbox"]').styler();
+    $('select').styler();
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change
@@ -176,4 +177,12 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    $('#regions').on('change', function(){
+        let cities = $(this).find('option:selected').data('cities');
+        $('#cities').find('.city-item').remove();
+        $.each(cities, function( key, value ){
+            $('#cities').append("<div class='city-item'>"+value+"</div>");
+        })
+    })
 });

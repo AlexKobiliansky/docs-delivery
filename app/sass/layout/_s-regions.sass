@@ -1,0 +1,80 @@
+.s-regions
+  padding-bottom: 76px
+  .section-title
+    margin-bottom: 64px
+
+.regions-top
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 50px
+  &-left
+    width: 360px
+  &-right
+    width: calc(100% - 390px)
+
+.regions-select-wrap
+  width: 100%
+  margin-bottom: 0
+
+
+.jq-selectbox
+  width: 100%
+  &.opened
+    .jq-selectbox__trigger-arrow
+      transform: rotate(180deg)
+
+
+.jq-selectbox__select
+  height: auto
+  font-size: 18px
+  font-family: $default-font
+  line-height: 1
+  padding: 23px 65px 22px 20px
+  border-radius: 4px
+  background: $accent-creamy!important
+  border: none!important
+  box-shadow: none
+
+.jq-selectbox__trigger
+  width: 50px
+  border: none
+
+.jq-selectbox__trigger-arrow
+  border: none
+  width: 16px
+  height: 9px
+  background-image: url('../img/icons/select-arrow.svg')
+  +bg-cover
+  top: calc(50% - 4.5px)
+  right: 29px
+
+.jq-selectbox li
+  font-size: 16px
+  padding: 10px
+
+.city-item
+  display: inline-block
+  font-size: 18px
+  line-height: 1.4
+  font-weight: 700
+  margin-right: 10px
+  margin-bottom: 10px
+  padding: 22px 20px 18px 47px
+  position: relative
+  border-radius: 4px
+  background-color: $accent-creamy
+  &:before
+    content: ''
+    position: absolute
+    width: 6px
+    height: 6px
+    border-radius: 50%
+    background-color: $accent-red
+    box-shadow: 0 0 0 5px rgba($accent-red, .2)
+    left: 23px
+    top: calc(50% - 3px)
+
+.regions-img
+  margin-left: auto
+  margin-right: auto

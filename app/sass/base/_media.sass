@@ -55,6 +55,27 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .regions-img
+    margin-bottom: 40px
+
+  .s-regions
+    padding-bottom: 30px
+    .section-title
+      margin-bottom: 30px
+
+  .regions-top
+    margin-bottom: 0
+    flex-wrap: wrap
+    &-left
+      width: 100%
+      margin-bottom: 20px
+    &-right
+      width: 100%
+
+  .regions-wrap
+    display: flex
+    flex-direction: column-reverse
+
   .section-form
     padding: 0
     input
@@ -140,6 +161,12 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .city-item
+    font-size: 16px
+    width: 100%
+    margin-right: 0
+    margin-bottom: 20px
 
   .greeting
     padding: 50px 25px
