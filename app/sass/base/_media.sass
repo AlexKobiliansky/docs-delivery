@@ -6,6 +6,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .contact-item
+    padding: 0 20px
+    &-desc
+      font-size: 18px
+    .phone
+      font-size: 24px
+
   .section-form
     padding: 0 50px
 
@@ -54,6 +61,27 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-contacts
+    padding-bottom: 44px
+    padding-top: 90px
+    .section-title
+      margin-bottom: 30px
+
+  .contacts-wrap
+    flex-wrap: wrap
+    background-color: #fff
+    border: none
+    padding-top: 30px
+    padding-bottom: 0
+
+  .contact-item
+    width: 100%
+    border-right: none
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+
 
   .regions-img
     margin-bottom: 40px
@@ -161,6 +189,21 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  #map
+    height: 257px
+    width: calc(100% + 30px)
+    position: relative
+    left: -15px
+    border-radius: 0
+
+  .contact-item
+    &-title
+      margin-bottom: 10px
+    &-desc
+      font-size: 18px
+    .phone
+      font-size: 20px
 
   .partners-slider
     .owl-dots
