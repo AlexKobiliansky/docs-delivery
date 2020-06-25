@@ -94,6 +94,15 @@ ul
     background-color: darken($accent-red, 5%)
     color: #fff
 
+.btn-dark
+  font-size: 16px
+  line-height: 1.5
+  font-weight: 700
+  background-color: $accent-dark
+  color: #fff
+  padding: 8px 30px
+  +ls
+
 .s-white
   padding-top: 100px
 
@@ -199,5 +208,36 @@ ul
 .page-title
   font-size: 40px
   +ls
+
+.breadcrumbs
+  font-size: 0
+  margin-bottom: 50px
+  a
+    display: inline-block
+    font-size: 16px
+    padding: 8px
+    min-width: 127px
+    text-align: center
+    border-radius: 4px
+    background-color: $accent-dark
+    color: #fff
+    font-weight: 700
+    position: relative
+    margin-right: 30px
+    &:after
+      content: ''
+      position: absolute
+      width: 14px
+      height: 2px
+      background-color: $accent-dark
+      right: -21px
+      top: calc(50% - 1px)
+    &:last-child
+      font-weight: normal
+      background-color: $accent-creamy
+      color: rgba($accent-dark, .5)
+      pointer-events: none
+      &:after
+        display: none
 
 

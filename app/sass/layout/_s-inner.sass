@@ -1,0 +1,40 @@
+.s-inner
+  padding-top: 60px
+
+.inner-container
+  max-width: 750px
+  margin-left: auto
+  margin-right: auto
+  .btn-dark
+    display: none
+
+.inner-content
+  background-color: $accent-creamy
+  border-radius: 4px
+  padding: 50px 66px
+  font-size: 18px
+  +ls
+  h3
+    font-size: 32px
+    font-weight: 700
+    margin-bottom: 20px
+  p
+    margin-bottom: 47px
+
+.inner-notice
+  background-image: url('../img/bg-notice.jpg')
+  border-radius: 4px
+  +bg-cover
+  color: #fff
+  font-weight: 700
+  padding: 30px 45px 30px 100px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 51px
+    height: 51px
+    background-image: url('../img/icons/notice-icon.svg')
+    +bg-cover
+    left: 30px
+    top: 30px
