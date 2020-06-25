@@ -1,0 +1,50 @@
+.main-foot
+  background-color: $accent-creamy
+
+.foot-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 39px 0
+  border-bottom: 2px solid rgba($accent-dark, .1)
+  .btn
+    font-size: 14px
+    font-weight: 700
+    width: 190px
+    height: 50px
+    line-height: 50px
+
+.foot-mnu
+  font-size: 0
+  li
+    display: inline-block
+    margin-right: 42px
+    &:last-child
+      margin-right: 0
+  a
+    font-size: 14px
+    position: relative
+    display: inline-block
+    line-height: 1
+    color: $text
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: -5px
+      width: 0
+      height: 2px
+      background-color: $accent-red
+      +mt(.3s)
+    &:hover
+      color: $accent-red
+      &:after
+        left: 0
+        width: 100%
+
+.copyright
+  padding: 20px 0
+  text-align: center
+  font-size: 12px
+  line-height: 14px
+  color: $accent-dark

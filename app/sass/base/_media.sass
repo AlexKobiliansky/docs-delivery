@@ -62,6 +62,21 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .foot-line
+    flex-direction: column
+    .logo
+      margin-bottom: 40px
+      img
+        width: 68px
+
+  .foot-mnu
+    margin-bottom: 10px
+    li
+      display: block
+      margin-right: 0
+      margin-bottom: 20px
+      text-align: center
+
   .s-contacts
     padding-bottom: 44px
     padding-top: 90px
@@ -397,6 +412,10 @@
     height: 20px
 
 @media (max-width: 390px)
+
+  .foot-line
+    .btn
+      width: 100%
 
   .popup-form
     text-align: left

@@ -74,17 +74,7 @@ $(document).ready(function(){
 
     var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ')
 
-    $('.intro-item-num').each(function () {
-        var $val = $(this).data("value");
 
-        $(this).animateNumber(
-            {
-                number: $val,
-                numberStep: comma_separator_number_step
-            },
-            1500
-        );
-    });
 
 
     $('img.svg').each(function(){
@@ -118,6 +108,24 @@ $(document).ready(function(){
             $img.replaceWith($svg);
         }, 'xml');
     });
+
+    $('.preloader').fadeOut();
+
+    setTimeout(function(){
+        $('.intro-item-num').each(function () {
+            var $val = $(this).data("value");
+
+            $(this).animateNumber(
+                {
+                    number: $val,
+                    numberStep: comma_separator_number_step
+                },
+                1500
+            );
+        });
+    }, 500)
+
+
 
 
     $("a[href='#popup-form']").magnificPopup({
