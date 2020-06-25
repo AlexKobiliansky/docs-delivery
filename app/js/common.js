@@ -123,6 +123,40 @@ $(document).ready(function(){
                 1500
             );
         });
+
+
+        $('.val-item-num').each(function () {
+            let $per = $(this).data("percents");
+
+            $(this).animateNumber(
+                {
+                    number: $per,
+                    numberStep: comma_separator_number_step
+                },
+                2000
+            );
+        });
+
+        $('.val-item-percents').each(function(){
+            let fill = $(this).data('fill');
+
+            $(this).circleProgress({
+                fill: "#5983E4",
+                value: fill,
+                size: 78,
+                thickness: 4,
+                emptyFill: "rgba(255, 255, 255, .7)",
+                startAngle: 4.7,
+                animation: {
+                    duration: 2000
+                }
+            });
+        })
+
+
+
+
+
     }, 500)
 
 
